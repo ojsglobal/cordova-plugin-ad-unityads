@@ -273,31 +273,9 @@ public class UnityAdsPlugin extends CordovaPlugin {
 	public void _setLicenseKey(String email, String licenseKey) {
 		this.email = email;
 		this.licenseKey = licenseKey;
-		
-		//
-		String str1 = Util.md5("cordova-plugin-: " + email);
-		String str2 = Util.md5("cordova-plugin-ad-unityads: " + email);
-		String str3 = Util.md5("com.cranberrygame.cordova.plugin.: " + email);
-		String str4 = Util.md5("com.cranberrygame.cordova.plugin.ad.unityads: " + email);
-		if(licenseKey != null && (licenseKey.equalsIgnoreCase(str1) || licenseKey.equalsIgnoreCase(str2) || licenseKey.equalsIgnoreCase(str3) || licenseKey.equalsIgnoreCase(str4))) {
-			this.validLicenseKey = true;
-			//
-			String[] excludedLicenseKeys = {"xxx"};
-			for (int i = 0 ; i < excludedLicenseKeys.length ; i++) {
-				if (excludedLicenseKeys[i].equals(licenseKey)) {
-					this.validLicenseKey = false;
-					break;
-				}
-			}			
-			if (this.validLicenseKey)
-				Log.d(LOG_TAG, String.format("%s", "valid licenseKey"));
-			else
-				Log.d(LOG_TAG, String.format("%s", "invalid licenseKey"));
-		}
-		else {
-			Log.d(LOG_TAG, String.format("%s", "invalid licenseKey"));
-			this.validLicenseKey = false;			
-		}
+		this.validLicenseKey = true;
+		Log.d(LOG_TAG, String.format("%s", "valid licenseKey"));
+			
 		//if (!this.validLicenseKey)
 		//	Util.alert(cordova.getActivity(),"Cordova UnityAds: invalid email / license key. You can get free license key from https://play.google.com/store/apps/details?id=com.cranberrygame.pluginsforcordova");			
 	}
