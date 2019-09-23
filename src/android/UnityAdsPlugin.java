@@ -111,9 +111,9 @@ public class UnityAdsPlugin extends CordovaPlugin {
 	protected String email;
 	protected String licenseKey;
 	public boolean validLicenseKey;
-	protected String TEST_GAME_ID = "42520";
-	protected String TEST_VIDEO_AD_PLACEMENT_ID = "defaultZone";
-	protected String TEST_REWARDED_VIDEO_AD_PLACEMENT_ID = "rewardedVideoZone";
+	protected String TEST_GAME_ID = "3301456";
+	protected String TEST_VIDEO_AD_PLACEMENT_ID = "video";
+	protected String TEST_REWARDED_VIDEO_AD_PLACEMENT_ID = "rewardedVideo";
 	//
 	protected String gameId;
 	protected String videoAdPlacementId;
